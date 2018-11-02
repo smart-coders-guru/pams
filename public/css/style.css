@@ -1,0 +1,10 @@
+
+#card-head{ padding-bottom: 5px!important;  padding-left:0px;  font-weight: bold; background:none;text-transform: uppercase;border-bottom-width: 2px;}
+#card-padding-none{padding:0;padding-top: 15px!important;padding-bottom: 12px!important;}
+.cont-header {border-bottom: 2px rgba(0, 0, 0, 0.125) solid!important;margin-top: -5px;margin-bottom: 40px;padding-bottom: 15px!important; height: 60px;}
+.cont-header h2{font-size:20px;left:0px!important;}
+.breadcrumb {float: right;color:black;font-size: 12px;padding:5px;position: absolute;top: 22px;right: 10px;border-radius: 2px;}
+.required{font-weight:bold; color:red; font-size:18px;}
+#page-wrapper{min-height:700px!important;}
+.header-dialog{padding-bottom: 2px;background:none; border-bottom:2px rgba(0, 0, 0, 0.125) solid;}
+.header-dialog h2{font-size: 24px; text-transform: uppercase;font-weight: bold;}
