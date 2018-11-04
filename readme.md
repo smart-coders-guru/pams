@@ -33,8 +33,11 @@ password=noApp
 state=0
 
 Ajouter un template de rapport (table report_template) suivant:
+
 report_template_name ---> default
+
 report_template_content --->
+
 \<div class="container" style="margin: auto; width: 100%; vertical-align: middle;background: rgba(200, 250, 200, 0.8); border-radius: 5px; padding: 15px; border: 2px solid green;">
 	\<div class="row" style="margin-bottom: 10px; margin-top: 10px; padding: 0px 15px 0px 15px;">
 		\<div class="col-md-12 col-sm-12 col-xs-12">
@@ -66,8 +69,11 @@ report_template_content --->
 
 		
 Ajouter le template d'email (table email_temlate) suivant:
+
 apps_id  ---> ID d'une application
+
 email_template_name ---> default
+
 email_template_content --->
 \<!doctype html>
 \<html>
@@ -123,17 +129,22 @@ Démarrer l'application en tapant à l'invite de commande :
 $php artisan serve
 
 Consulter le rendu graphique dans le navigateur via l'URL: localhost:8000/home
-pour continuer graphiquement, connectez vous avec les paramètres (login=noApp, password=noApp)
+
+Pour continuer graphiquement, connectez vous avec les paramètres (login=noApp, password=noApp)
 
 
-Télécharger et installer le logiciel "postman" pour tester les services REST de notre application
-taper les URLs suivantes dans la console de postman:
+Télécharger et installer le logiciel "postman" pour tester les services REST de notre application.
+
+Taper les URLs suivantes dans la console de postman:
 
 
 Pour tester la génération d'un rapport
+
 url = localhost:8000/report/generate
+
 method = POST
-body a les paramètres 
+
+Body a les paramètres 
      key = TestKey
 	 data = {
 				"template":"default",
@@ -148,10 +159,15 @@ body a les paramètres
 	 
 Le rapport généré est consultable via l'URL renvoyée ou sous le dossier : storage
 
+
+
 Pour tester l'envoie d'email
+
 url = localhost:8000/mail/send
+
 method = POST
-body a les paramètres 
+
+Body a les paramètres 
      key = TestKey
 	 data = {
 				"to":"ndadjimaxime@yahoo.fr",
@@ -165,4 +181,4 @@ body a les paramètres
 				}
 			}
 
-Ils existent d'autres services, mais nous avons présenté uniquement les plus importants
+Il existe d'autres services, mais nous avons présenté uniquement les plus importants.
