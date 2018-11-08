@@ -20,17 +20,18 @@ class CreateReports extends Migration
             $table->string('apps_password');
             $table->text('apps_desc')->nullable()->default(null);
             $table->timestamp('apps_creation_date');
-            $table->text('apps_add_info')->nullable()->default(null);
             $table->integer('apps_state');
         });
 
         Schema::create('report_template', function (Blueprint $table) {
             $table->increments('report_template_id');
+            $table->unsignedInteger('apps_id');
             $table->string('report_template_name');
             $table->text('report_template_content');
             $table->text('report_template_desc')->nullable()->default(null);
-            $table->text('report_template_add_info')->nullable()->default(null);
+            $table->index('apps_id', 'i_fk_report_template_apps');
             $table->integer('report_template_state');
+            $table->foreign('apps_id')->references('apps_id')->on('apps')->onDelete('cascade')->onUpdate('cascade');
         });
 
         Schema::create('report', function (Blueprint $table) {
@@ -46,16 +47,6 @@ class CreateReports extends Migration
             $table->integer('report_state');
             $table->index('apps_id', 'i_fk_report_apps');
             $table->index('report_template_id', 'i_fk_report_report_template');
-            $table->foreign('apps_id')->references('apps_id')->on('apps')->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign('report_template_id')->references('report_template_id')->on('report_template')->onDelete('cascade')->onUpdate('cascade');
-        });
-
-        Schema::create('apps_report_template', function (Blueprint $table) {
-            $table->unsignedInteger('apps_id');
-            $table->unsignedInteger('report_template_id');
-            $table->primary('apps_id', 'report_template_id');
-            $table->index('apps_id', 'i_fk_apps_report_template_apps');
-            $table->index('report_template_id', 'fk_apps_report_template_report_template');
             $table->foreign('apps_id')->references('apps_id')->on('apps')->onDelete('cascade')->onUpdate('cascade');
             $table->foreign('report_template_id')->references('report_template_id')->on('report_template')->onDelete('cascade')->onUpdate('cascade');
         });
@@ -154,7 +145,6 @@ class CreateReports extends Migration
         Schema::dropIfExists('email_trace');
         Schema::dropIfExists('programmed_email_receiver');
         Schema::dropIfExists('mailing_list_apps');
-        Schema::dropIfExists('apps_report_template');
         Schema::dropIfExists('mailing_list');
         Schema::dropIfExists('email_account');
         Schema::dropIfExists('programmed_email');

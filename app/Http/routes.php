@@ -16,22 +16,13 @@ Route::post('saveReport', 'HomeController@saveReport');
 Route::post('saveReportTemplate', 'ReportingController@saveReportTemplate');
 Route::post('register', 'AppController@saveApps');
 Route::post('updateCurrentApp', 'AppController@updateCurrentApp');
-
-
-
 Route::post('saveEmailTemplate', 'ReportingController@saveEmailTemplate');
-
-
-
 Route::get('reportTemplate', 'HomeController@getReportTemplate');
 
 Route::get('email-account', 'HomeController@getEmailAccounts');
 Route::get('mailing-list', 'HomeController@getMailingList');
 Route::get('email', 'HomeController@getMailList');
 Route::get('programmed-email', 'HomeController@getProgrammedMailList');
-
-
-
 
 Route::post('saveEmailAccount', 'HomeController@saveEmailAccount');
 Route::post('saveMailingList', 'HomeController@saveMailingList');
