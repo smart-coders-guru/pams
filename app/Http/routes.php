@@ -28,6 +28,7 @@ Route::post('saveEmailAccount', 'HomeController@saveEmailAccount');
 Route::post('saveMailingList', 'HomeController@saveMailingList');
 Route::post('saveProgrammedEmail', 'HomeController@saveProgrammedEmail');
 
+Route::get('testpdf', 'ApiController@testPdf');
 
 /********************** Email send restful *********************************/
 Route::post('mail/send', 'ApiController@simpleEmailSend');
