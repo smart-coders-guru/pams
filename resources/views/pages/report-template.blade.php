@@ -119,7 +119,7 @@
                                             <tr class="odd gradeX">
                                                 <td><input type="checkbox" value=""/></td>
                                                 <td style="width:30px;"> {{ $report_template->report_template_id }}</td>
-                                                <td> {{ $report_template->report_template_title }}</td>
+                                                <td> {{ $report_template->report_template_name }}</td>
                                                 <td> {{ $report_template->report_template_desc }}</td> 
                                                 <td>
                                                     <div class="btn-group">

@@ -49,7 +49,6 @@ class AppController extends Controller
             $apps->apps_login = $request->input('apps_login');
             $apps->apps_password = $request->input('apps_password');
             $apps->apps_desc = $request->input('apps_desc');
-            $apps->apps_add_info = '';
             $apps->apps_state = 0;
             $apps->apps_creation_date = date('Y-m-d H:i:s');
             $apps->save();

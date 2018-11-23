@@ -30,7 +30,7 @@ class ApiController extends Controller
     		return true;
     	return false;
     }
-    function string2KeyedArray($string, $delimiter = ',', $kv = '=>') {
+    /*function string2KeyedArray($string, $delimiter = ',', $kv = '=>') {
 	  if ($a = explode($delimiter, $string)) { 
 	    foreach ($a as $s) { 
 	      if ($s) {
@@ -47,7 +47,7 @@ class ApiController extends Controller
     function convertStringToArray(Request $request){
     	return $this->string2KeyedArray($request->data);
     }
-   
+    */
     function downloadPdfReport(Request $request, $key, $title){
     	if($this->haveAccessRight($request, $key)){
     		return response()->file(storage_path().'/'.$title);
@@ -83,6 +83,7 @@ class ApiController extends Controller
 		    	$pdf = \App::make('dompdf.wrapper');
 				
 				$dataArr = json_decode($data, true);
+				print_r(DB::table('report_template')) ;
 				$repTemplate = DB::table('report_template')->where('report_template_name', $dataArr['template'])->get()[0];
 				$repContent = $this->getContent($repTemplate->report_template_content, $dataArr['data']);
 		    	$pdf->loadHTML($repContent);
@@ -122,7 +123,6 @@ class ApiController extends Controller
 		        try {
 		            $objWriter->save(storage_path('report.docx'));
 		        } catch (Exception $e) {
-
 		        }
 		        return response()->download(storage_path('report.docx'));
 		    }
@@ -131,10 +131,9 @@ class ApiController extends Controller
 
 	function testPdf(){
 		$pdf = \App::make('dompdf.wrapper');
-		$pdf->loadHTML($this->oneri());
+		$pdf->loadHTML($this->webcolf());
 		return $pdf->stream();
 	}
-
 
 
 	function cu_2018(){
@@ -252,36 +251,47 @@ class ApiController extends Controller
 
 	function oneri(){
 		return "<div style=\"padding-left:35px; font-size:14px; padding-right:35px;text-align:justify;\">
-	<div style=\"width: 40%; margin-top:50px;\">
-		<span style=\"font-weight: bold;\">CAVALLETTO EDOARDINO</span><br>
-		VIA SALGARI, 19<br>
-		40127 BOLOGNA (BO)<br>
-		<div style=\"margin-top: 50px;\"></div>
-	</div>
-	<div style=\"width: 30%;margin:50px 30% 0px 40%;\">
-		NARUDIA IZEHIESE<br>
-		VIA DEI MILLE, 2<br>
-		40121 BOLOGNA (BO)<br>
-	</div>
-	<div style=\"width: 100%; margin-top: 50px;font-style:justify;\">
-		<span style=\" font-size: 18px;\">Oggetto: <b>DICHIARAZIONE ONERI DEDUCIBILI </b></span><br>
-		<div style=\"height: 20px!important;\"></div>
-		<span style=\"\">Facendo seguito agli accordi verbali intercorsi, si conferma la Sua assunzione ed in base al comma 3 dell'art. 9-bis L. 608/96 e al D.Lgs. 152/97, si specificano gli aspetti caratterizzanti il Suo rapporto di lavoro:</span>
-	</div>
-	
-	<div style=\"margin-top: 18px;\">
-		<p>Per quanto non specificato nella presente le parti dichiarano di voler fare riferimento alle norme previste dal contratto collettivo nazionale di lavoro per i prestatori di lavoro domestico stipulato il 21 maggio 2013 e a tutte le norme di Legge vigenti.</p>
-		<p>In segno di accettazione delle condizioni sopra espresse, si chiede la restituzione di una copia della presente dopo averla sottoscritta.</p>
-		<p>Certi di poter contare nella Sua migliore collaborazione, porgiamo distinti saluti.</p>
-	</div>
-	<div style=\"margin-top: 18px;\">
-		<div style=\"\">
-			<div style=\"width:250px;float: left;padding-bottom: 30px; border:none; border-bottom:2px solid!important;\">Il Collaboratore</div>
-			<div style=\"border:none; border-bottom:2px solid!important;margin-left: 50px;width:250px;float: left;padding-bottom: 30px;\">Il Collaboratore</div>
+		<div style=\"width: 40%; margin-top:50px;\">
+			<span style=\"font-weight: bold;\">CAVALLETTO EDOARDINO</span><br>
+			VIA SALGARI, 19<br>
+			40127 BOLOGNA (BO)<br>
+			<div style=\"margin-top: 50px;\"></div>
+		</div>
+		<div style=\"width: 30%;margin:50px 30% 0px 40%;\">
+			<b>BOLOGNA, 6/11/12</b>
+		</div>
+		<div style=\"width: 100%; margin-top: 50px;font-style:justify;\">
+			<span style=\" font-size: 18px;\">Oggetto: <b>DICHIARAZIONE ONERI DEDUCIBILI </b></span><br>
+			<div style=\"height: 20px!important;\"></div>
+			<span style=\">Facendo seguito agli accordi verbali intercorsi, si conferma la Sua assunzione ed in base al comma 3 dell'art. 9-bis L. 608/96 e al D.Lgs. 152/97, si specificano gli aspetti caratterizzanti il Suo rapporto di lavoro:</span>
 		</div>
 		
-		<div style=\"width:250px;float: left;padding-bottom: 30px; border:none; border-bottom:2px solid!important;\">Il Collaboratore</div>
-	</div>
+		<div style=\"margin-top: 18px;\">
+			<p>Ai sensi dell'art. 10 del testo unico delle imposte dirette, si dichiara che i contributi deducibili dalla dichiarazione dei redditi dell'anno 2018, per contributi corrisposti nell'anno a collaboratori domestici, sono pari ad Euro 893,00</p>
+			<p>In segno di accettazione delle condizioni sopra espresse, si chiede la restituzione di una copia della presente dopo averla sottoscritta.</p>
+			<p>Altri 23,50 Euro sono stati versati per contributi di assistenza sanitaria Cassa Colf. Quest'ultimi non sono però deducibili e non sono stati ricompresi nella somma di cui sopra in quanto CassaColf non ha natura esclusivamente di cassa sanitaria ma ricopre anche scopi di assistenza contrattuale ed altre finalità bilaterali.</p>
+			<p> Nell'importo sopra indicato sono esclusi i contributi a carico del collaboratore. In fede. </p>
+		</div>
+		<div style=\"margin-top: 40px;\">	
+			<div style=\"width:150px;float: right;padding-bottom: 40px; border:none; border-bottom:1px solid!important;\">Il Collaboratore</div>
+		</div>
+		<div style=\"margin-top: 150px;\">	
+			<div style=\"width:300px;text-align: left;padding-bottom: 40px; border:none; border-bottom:1px solid!important;\"></div>
+			<h6>Dettaglio contabile deduz: Mese 	Importo </h6>
+			<ul style=\"margin-left:-39px; list-style-type: none;\">
+				<li>NARUDIA IZEHIESE	76,00 </li>
+				<li>NARUDIA IZEHIESE	95,00  </li>
+				<li>NARUDIA IZEHIESE	76,00 </li>
+				<li>NARUDIA IZEHIESE	95,00  </li>
+				<li>NARUDIA IZEHIESE	76,00 </li>
+				<li>NARUDIA IZEHIESE	95,00  </li>
+				<li>NARUDIA IZEHIESE	76,00 </li>
+				<li>NARUDIA IZEHIESE	95,00 </li>
+				<li>NARUDIA IZEHIESE	76,00 </li>
+				<li>NARUDIA IZEHIESE	95,00  </li>
+				<li>NARUDIA IZEHIESE	76,00 </li>
+			</ul>
+		</div>
 	</div>";
 	}
 
@@ -301,7 +311,7 @@ class ApiController extends Controller
 		40121 BOLOGNA (BO)<br>
 	</div>
 	<div style=\"width: 100%; margin-top: 50px;font-style:justify;\">
-		<span style=\" font-size: 18px;\">OGGETTO: <b>Lettera di assunzione.</b></span><br>
+		<span style=\" font-size: 18px;\">OGGETTO: <b>#object_1#</b></span><br>
 		<div style=\"height: 20px!important;\"></div>
 		<span style=\"\">Facendo seguito agli accordi verbali intercorsi, si conferma la Sua assunzione ed in base al comma 3 dell'art. 9-bis L. 608/96 e al D.Lgs. 152/97, si specificano gli aspetti caratterizzanti il Suo rapporto di lavoro:</span>
 	</div>
