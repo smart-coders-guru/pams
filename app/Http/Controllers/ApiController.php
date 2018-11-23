@@ -81,13 +81,11 @@ class ApiController extends Controller
     		$report = new Report();
 			if($type=="pdf"){
 		    	$pdf = \App::make('dompdf.wrapper');
-				
 				$dataArr = json_decode($data, true);
-				print_r(DB::table('report_template')) ;
-				$repTemplate = DB::table('report_template')->where('report_template_name', $dataArr['template'])->get()[0];
+				return $dataArr['template'];
+				//$repTemplate = DB::table('report_template')->where('report_template_name', $dataArr['template'])->get()[0];
 				$repContent = $this->getContent($repTemplate->report_template_content, $dataArr['data']);
 		    	$pdf->loadHTML($repContent);
-				
 		    	$pdf->save(storage_path().'/PdfFile-'.$date.'.pdf');
 		        $report->report_template_id = 1;
 		        foreach ($app as $app) {
@@ -130,9 +128,10 @@ class ApiController extends Controller
 	}
 
 	function testPdf(){
-		$pdf = \App::make('dompdf.wrapper');
-		$pdf->loadHTML($this->webcolf());
-		return $pdf->stream();
+		//$pdf = \App::make('dompdf.wrapper');
+		//$pdf->loadHTML($this->webcolf());
+		$repTemplate = DB::table('report_template')->where('report_template_name', 'default')->get()[0];
+		return $repTemplate->report_template_name;//$pdf->stream();
 	}
 
 
