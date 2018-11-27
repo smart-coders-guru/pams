@@ -248,51 +248,7 @@ class ApiController extends Controller
 	</div>";
 	}
 
-	function oneri(){
-		return "<div style=\"padding-left:35px; font-size:14px; padding-right:35px;text-align:justify;\">
-		<div style=\"width: 40%; margin-top:50px;\">
-			<span style=\"font-weight: bold;\">CAVALLETTO EDOARDINO</span><br>
-			VIA SALGARI, 19<br>
-			40127 BOLOGNA (BO)<br>
-			<div style=\"margin-top: 50px;\"></div>
-		</div>
-		<div style=\"width: 30%;margin:50px 30% 0px 40%;\">
-			<b>BOLOGNA, 6/11/12</b>
-		</div>
-		<div style=\"width: 100%; margin-top: 50px;font-style:justify;\">
-			<span style=\" font-size: 18px;\">Oggetto: <b>DICHIARAZIONE ONERI DEDUCIBILI </b></span><br>
-			<div style=\"height: 20px!important;\"></div>
-			<span style=\">Facendo seguito agli accordi verbali intercorsi, si conferma la Sua assunzione ed in base al comma 3 dell'art. 9-bis L. 608/96 e al D.Lgs. 152/97, si specificano gli aspetti caratterizzanti il Suo rapporto di lavoro:</span>
-		</div>
-		
-		<div style=\"margin-top: 18px;\">
-			<p>Ai sensi dell'art. 10 del testo unico delle imposte dirette, si dichiara che i contributi deducibili dalla dichiarazione dei redditi dell'anno 2018, per contributi corrisposti nell'anno a collaboratori domestici, sono pari ad Euro 893,00</p>
-			<p>In segno di accettazione delle condizioni sopra espresse, si chiede la restituzione di una copia della presente dopo averla sottoscritta.</p>
-			<p>Altri 23,50 Euro sono stati versati per contributi di assistenza sanitaria Cassa Colf. Quest'ultimi non sono però deducibili e non sono stati ricompresi nella somma di cui sopra in quanto CassaColf non ha natura esclusivamente di cassa sanitaria ma ricopre anche scopi di assistenza contrattuale ed altre finalità bilaterali.</p>
-			<p> Nell'importo sopra indicato sono esclusi i contributi a carico del collaboratore. In fede. </p>
-		</div>
-		<div style=\"margin-top: 40px;\">	
-			<div style=\"width:150px;float: right;padding-bottom: 40px; border:none; border-bottom:1px solid!important;\">Il Collaboratore</div>
-		</div>
-		<div style=\"margin-top: 150px;\">	
-			<div style=\"width:300px;text-align: left;padding-bottom: 40px; border:none; border-bottom:1px solid!important;\"></div>
-			<h6>Dettaglio contabile deduz: Mese 	Importo </h6>
-			<ul style=\"margin-left:-39px; list-style-type: none;\">
-				<li>NARUDIA IZEHIESE	76,00 </li>
-				<li>NARUDIA IZEHIESE	95,00  </li>
-				<li>NARUDIA IZEHIESE	76,00 </li>
-				<li>NARUDIA IZEHIESE	95,00  </li>
-				<li>NARUDIA IZEHIESE	76,00 </li>
-				<li>NARUDIA IZEHIESE	95,00  </li>
-				<li>NARUDIA IZEHIESE	76,00 </li>
-				<li>NARUDIA IZEHIESE	95,00 </li>
-				<li>NARUDIA IZEHIESE	76,00 </li>
-				<li>NARUDIA IZEHIESE	95,00  </li>
-				<li>NARUDIA IZEHIESE	76,00 </li>
-			</ul>
-		</div>
-	</div>";
-	}
+	
     function word_content(){
     	return "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
     }
