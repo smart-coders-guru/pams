@@ -127,13 +127,645 @@ class ApiController extends Controller
 		}
 	}
 
-	/*function testPdf(){
+	function testPdf(){
 		$pdf = \App::make('dompdf.wrapper');
-		$pdf->loadHTML($this->webcolf());
-		$repTemplate = DB::table('report_template')->where('report_template_name', 'default')->get()[0];
+		$pdf->loadHTML($this->costi());
 		return $pdf->stream();
-	}*/
+	}
+	function costi(){
+		return "
+		<style type=\"text/css\">
+			.marginLeft{font-size:12px;}	
+		</style>
+		<div style=\" padding-left:5px; font-size:12px; padding-right:5px;text-align:justify;\">
+		<div style=\"margin-top:0px; border-bottom:1px solid; padding-left:20px;padding-right:20px; padding-bottom:5px;\">
+			<div style=\"width: 100%; font-weight: bold;font-size:18px;\"><span>www.WEBCOLF.com - Scheda retribuzione ed analisi costo collaboratore</span> <span style=\"float: right;\">Anno: 2018</span></div>
+		</div>
+		<div>
+			<span>Datore di lavoro: CAVALLETTO EDOARDINO</span><br>
+			<span>Residenza (VIA) : VIA SALGARI, 19</span> <span style=\"margin:auto 20px auto 20px;\">Residenza (VIA) : VIA SALGARI, 19</span> <span>Residenza (VIA) : VIA SALGARI, 19</span><br/>
+			<span>Residenza (VIA) : VIA SALGARI, 19</span> <span style=\"margin:auto 20px auto 20px;\">Residenza (VIA) : VIA SALGARI, 19</span> <span>Residenza (VIA) : VIA SALGARI, 19</span><br/>
+		</div>
+		<div style=\"margin-top:10px; border-top:1px solid; border-bottom:1px solid; padding-bottom:5px;\">
+			<div style=\"width: 100%; font-weight: bold;font-size:18px;\"><span>Collaboratore: NARUDIA IZEHIESE</span></div>
+			<div style=\"width: 100%; font-weight: bold;font-size:18px;\"><span>Collaboratore: NARUDIA IZEHIESE</span></div>
+			<div style=\"width: 100%; font-weight: bold;font-size:18px;\"><span>Collaboratore: NARUDIA IZEHIESE</span></div>
+			<div style=\"width: 100%; font-weight: bold;font-size:18px;\"><span>Collaboratore: NARUDIA IZEHIESE</span></div>
+		</div>
+		<div style=\"margin-top:10px; border-top:none; border-bottom:1px solid; padding-bottom:5px;\">
+			<table border=\"1\">
+				<tr>
+					<td style=\" \">Paga base oraria  :</td>
+					<td style=\"padding-left:50px;\">4,57000</td>
+					<td>Inquadramento  :</td>
+					<td style=\"padding-left:50px;\">A</td>
+				</tr>
 
+			</table>
+		</div>
+		<div style=\"margin-top:10px; border-top:none; border-bottom:1px solid; padding-bottom:5px;\">
+			<table border=\"1\">
+				<tr>
+					<td>Ore:</td>
+					<td>01</td>
+					<td class=\"marginLeft\">02</td>
+					<td class=\"marginLeft\">03</td>
+					<td class=\"marginLeft\">04</td>
+					<td class=\"marginLeft\">05</td>
+					<td class=\"marginLeft\">06</td>
+					<td class=\"marginLeft\">07</td>
+					<td class=\"marginLeft\">08</td>
+					<td class=\"marginLeft\">09</td>
+					<td class=\"marginLeft\">10</td>
+					<td class=\"marginLeft\">11</td>
+					<td class=\"marginLeft\">12</td>
+					<td>13</td>
+					<td>14</td>
+					<td class=\"marginLeft\">15</td>
+					<td class=\"marginLeft\">16</td>
+					<td class=\"marginLeft\">17</td>
+					<td class=\"marginLeft\">18</td>
+					<td class=\"marginLeft\">19</td>
+					<td class=\"marginLeft\">20</td>
+					<td class=\"marginLeft\">21</td>
+					<td class=\"marginLeft\">22</td>
+					<td class=\"marginLeft\">23</td>
+					<td class=\"marginLeft\">24</td>
+					<td class=\"marginLeft\">25</td>
+					<td class=\"marginLeft\">26</td>
+					<td class=\"marginLeft\">27</td>
+					<td class=\"marginLeft\">28</td>
+					<td class=\"marginLeft\">29</td>
+					<td class=\"marginLeft\">30</td>
+					<td class=\"marginLeft\">31</td>
+				</tr>
+				<tr>
+					<td >Genn.</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+				</tr>
+				<tr>
+					<td>Febb.</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+				</tr>
+				<tr>
+					<td><b>Marzo</b></td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+				</tr>
+				<tr>
+					<td>Apri.</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+				</tr>
+				<tr>
+					<td>Magg.</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+				</tr>
+				<tr>
+					<td>Giug.</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+				</tr>
+				<tr>
+					<td>Lugl.</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+				</tr>
+				<tr>
+					<td>Agos.</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+				</tr>
+				<tr>
+					<td>Sett.</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+				</tr>
+				<tr>
+					<td>Otto.</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+				</tr>
+				<tr>
+					<td>Nove.</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+				</tr>
+				<tr>
+					<td>Dice.</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+					<td>5</td>
+				</tr>
+			</table>
+		</div>
+		<div style=\"margin-top:10px; border-top:none; border-bottom:none; padding-bottom:5px;\">
+			<table border=\"1\">
+				<tr>
+					<td style=\"font-family:Apple Chancery, cursive;\">Costi mensili:</td>
+					<td style=\"padding-left:40px;\">Genn.</td>
+					<td class=\"marginLeft\">Febb.</td>
+					<td class=\"marginLeft\">Marzo</td>
+					<td class=\"marginLeft\">Apri.</td>
+					<td class=\"marginLeft\">Magg.</td>
+					<td class=\"marginLeft\">Giug.</td>
+					<td class=\"marginLeft\">Lugl.</td>
+					<td class=\"marginLeft\">Agos.</td>
+					<td class=\"marginLeft\">Sett.</td>
+					<td class=\"marginLeft\">Otto.</td>
+					<td class=\"marginLeft\">Nove.</td>
+					<td class=\"marginLeft\">Dice.</td>
+				</tr>
+				<tr>
+					<td >Retrib.lorda:</td>
+					<td style=\"padding-left:40px;\">Genn.</td>
+					<td>831,93</td>
+					<td>703,00</td>
+					<td>773,30</td>
+					<td>726,48</td>
+					<td>802,62</td>
+					<td>767,47</td>
+					<td>773,30</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Cont.Car.Dip:</td>
+					<td style=\"padding-left:40px;\">Genn.</td>
+					<td>Febb.</td>
+					<td>Marzo</td>
+					<td>Apri.</td>
+					<td>Magg.</td>
+					<td>Giug.</td>
+					<td>Lugl.</td>
+					<td>Agos.</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td><b>Netto :</b></td>
+					<td style=\"padding-left:40px;\"><b>805,00 </b></td>
+					<td><b>676,00</b></td>
+					<td><b>740,00</b></td>
+					<td><b>699,00</b></td>
+					<td><b>776,00</b></td>
+					<td><b>733,00</b></td>
+					<td><b>747,00</b></td>
+					<td><b>775,00</b></td>
+					<td><b></b></td>
+					<td><b></b></td>
+					<td><b></b></td>
+					<td><b></b></td>
+				</tr>
+				<tr>
+					<td>Vitto/Allogg :</td>
+					<td style=\"padding-left:40px;\">Genn.</td>
+					<td>Febb.</td>
+					<td>Marzo</td>
+					<td>Apri.</td>
+					<td>Magg.</td>
+					<td>Giug.</td>
+					<td>Lugl.</td>
+					<td>Agos.</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Contributi :</td>
+					<td style=\"padding-left:40px;\">Genn.</td>
+					<td>Febb.</td>
+					<td>Marzo</td>
+					<td>Apri.</td>
+					<td>Magg.</td>
+					<td>Giug.</td>
+					<td>Lugl.</td>
+					<td>Agos.</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Ferie  :</td>
+					<td style=\"padding-left:40px;\">Genn.</td>
+					<td>Febb.</td>
+					<td>Marzo</td>
+					<td>Apri.</td>
+					<td>Magg.</td>
+					<td>Giug.</td>
+					<td>Lugl.</td>
+					<td>Agos.</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>13a mensil :</td>
+					<td style=\"padding-left:40px;\">Genn.</td>
+					<td>Febb.</td>
+					<td>Marzo</td>
+					<td>Apri.</td>
+					<td>Magg.</td>
+					<td>Giug.</td>
+					<td>Lugl.</td>
+					<td>Agos.</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>T. F. R.</td>
+					<td style=\"padding-left:40px;\">60,36</td>
+					<td>57,22</td>
+					<td>62,95</td>
+					<td>58,96</td>
+					<td>65,39</td>
+					<td>62,52</td>
+					<td>63,22</td>
+					<td>65,65</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td>Totale Costo:</td>
+					<td style=\"padding-left:40px;\">1.097,22</td>
+					<td>965,15</td>
+					<td>1.060,69</td>
+					<td>990,37</td>
+					<td>1.072,94</td>
+					<td>1.054,42</td>
+					<td>1.041,45</td>
+					<td>1.073,20</td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+";
+	}
 
 	function cu_2018(){
 		return "<div style=\"padding-left:30px; padding-bottom:30px;\">
