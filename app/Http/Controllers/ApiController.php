@@ -126,11 +126,14 @@ class ApiController extends Controller
 		    }
 		}
 	}
-
+	/**
+	 *
+	 * @return \Illuminate\Http\Response
+	*/
 	function testPdf(){
-		$pdf = \App::make('dompdf.wrapper');
-		$pdf->loadHTML($this->costi());
-		return $pdf->stream();
+		//$pdf = \App::make('dompdf.wrapper');
+		//$pdf->loadHTML($this->costi());
+		return response()->json("The email was sent successfully", 200);;//$pdf->stream();
 	}
 	function costi(){
 		return "
